@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poley's Cafe | Awake the Senses</title>
+  <meta name="description"
+    content="Experience a fluid, scroll-driven interactive hero animation showcasing a high-fidelity coffee cup splash.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Epilogue:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed-dim": "#ffb781",
+            "surface-container-low": "#f6f3f2",
+            "background": "#fcf9f8",
+            "inverse-surface": "#303030",
+            "on-background": "#1b1c1c",
+            "on-primary": "#ffffff",
+            "secondary-fixed": "#e6e2dd",
+            "surface-container": "#f0eded",
+            "on-primary-fixed-variant": "#294e40",
+            "surface-variant": "#e4e2e1",
+            "outline": "#717974",
+            "on-tertiary-fixed-variant": "#6f3800",
+            "on-secondary-fixed-variant": "#484743",
+            "on-secondary-fixed": "#1c1c19",
+            "surface-container-high": "#eae7e7",
+            "outline-variant": "#c1c8c3",
+            "on-secondary": "#ffffff",
+            "tertiary-container": "#492300",
+            "secondary": "#605e5b",
+            "secondary-fixed-dim": "#c9c6c1",
+            "secondary-container": "#e6e2dd",
+            "primary-container": "#0c3327",
+            "on-primary-fixed": "#002117",
+            "on-error": "#ffffff",
+            "on-surface": "#1b1c1c",
+            "on-secondary-container": "#666460",
+            "surface-dim": "#dcd9d9",
+            "inverse-primary": "#a7cfbe",
+            "surface-container-lowest": "#ffffff",
+            "surface-bright": "#fcf9f8",
+            "surface-container-highest": "#e4e2e1",
+            "error": "#ba1a1a",
+            "error-container": "#ffdad6",
+            "on-tertiary-container": "#d58038",
+            "surface-tint": "#416657",
+            "surface": "#fcf9f8",
+            "on-tertiary": "#ffffff",
+            "tertiary-fixed": "#ffdcc4",
+            "inverse-on-surface": "#f3f0f0",
+            "on-tertiary-fixed": "#2f1400",
+            "primary": "#001d14",
+            "on-primary-container": "#769c8c",
+            "primary-fixed-dim": "#a7cfbe",
+            "on-surface-variant": "#414845",
+            "on-error-container": "#93000a",
+            "tertiary": "#2b1200",
+            "primary-fixed": "#c3ecd9"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin-mobile": "20px",
+            "container-max": "1280px",
+            "unit": "8px",
+            "margin-desktop": "80px",
+            "section-gap": "160px",
+            "margin-tablet": "40px",
+            "gutter": "32px"
+          },
+          "fontFamily": {
+            "body-lg": ["Plus Jakarta Sans"],
+            "headline-xl": ["Epilogue"],
+            "headline-lg": ["Epilogue"],
+            "display-lg": ["Epilogue"],
+            "headline-lg-mobile": ["Epilogue"],
+            "body-md": ["Plus Jakarta Sans"],
+            "label-caps": ["Plus Jakarta Sans"],
+            "display-xl": ["Epilogue"]
+          },
+          "fontSize": {
+            "body-lg": ["18px", { "lineHeight": "32px", "fontWeight": "400" }],
+            "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+            "display-lg": ["60px", { "lineHeight": "68px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+            "body-md": ["16px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700" }],
+            "display-xl": ["84px", { "lineHeight": "92px", "letterSpacing": "-0.04em", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="overflow-x-hidden">
+
+  <!-- Custom Loading Preloader -->
+  <div id="preloader" class="preloader" role="status" aria-live="polite">
+    <div class="preloader-content">
+      <div class="logo-container">
+        <svg class="logo-svg" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="45" stroke="url(#logo-grad)" stroke-width="2" fill="none" stroke-dasharray="283"
+            stroke-dashoffset="283" />
+          <polygon points="50,30 70,65 30,65" fill="none" stroke="url(#logo-grad)" stroke-width="2" />
+          <defs>
+            <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FF9B50" />
+              <stop offset="100%" stop-color="#E25E3E" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <h1 class="loader-title">BREWING EXPERIENCE</h1>
+      <div class="progress-bar-container">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+      <div id="progress-text" class="progress-text">0%</div>
+    </div>
+  </div>
+
+  <!-- Floating Glass Navigation Bar -->
+  <nav id="floating-navbar" class="floating-navbar" role="navigation" aria-label="Main Navigation">
+    <a class="flex items-center gap-3 hover:opacity-95 transition-opacity" href="#">
+      <img alt="Poley's Cafe Logo" class="h-10 w-10 rounded-full object-cover border border-[#C68B59]/30"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuADrgxvOnoAPz0sj8_m1EP09Q4TMK3xkfZw-CiqhfbUhcAIEwWJNozpzagZqBK4NpuSXM1PbXsYbfTroPQ_ByWYsQ667UKGg34K4X66y6ImCinwC2sjPNPRxGz_xh3FQ_eHetz7PClxE5ZMpVo1jZeTDFAWlcFMiJ0dCrPjYXGaOt6-uVulrRVwMeKe7CKReNoFCf3hhJ-GVh7uWljTwBZaCVOL4oLkCVdYyzEWR4nAOCIAYe95pi0vnblobrTFsQh0jjsV9Zrpol5O">
+      <span class="font-display-lg text-lg text-white uppercase tracking-widest font-bold">Poley's</span>
+    </a>
+    <div class="hidden md:flex gap-6 lg:gap-8 items-center">
+      <a class="nav-link" href="#">Home</a>
+      <a class="nav-link" href="#experience">Story</a>
+      <a class="nav-link" href="#menu">Menu</a>
+      <a class="nav-link" href="#gallery">Gallery</a>
+      <a class="nav-link" href="#menu">Reviews</a>
+      <a class="nav-link" href="#visit">Visit Us</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <a class="navbar-cta" href="#menu">Explore Menu</a>
+      <button class="md:hidden text-white hover:text-primary transition-colors focus:outline-none"
+        aria-label="Toggle Menu">
+        <span class="material-symbols-outlined text-2xl">menu</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Scroll Animation Section -->
+  <div class="hero-scroll-section" id="hero-scroll-section">
+    <div class="canvas-container">
+      <canvas id="animation-canvas"></canvas>
+      <div class="canvas-overlay"></div>
+    </div>
+
+    <!-- Premium Intro Section (Fades on scroll) -->
+    <div id="hero-intro" class="hero-intro">
+      <!-- Ambient Glows -->
+      <div
+        class="bg-glow absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-[#0c3327]/40 rounded-full filter blur-[120px] pointer-events-none">
+      </div>
+      <div
+        class="bg-glow absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-[#C68B59]/15 rounded-full filter blur-[150px] pointer-events-none">
+      </div>
+
+      <!-- Ambient Golden Particles -->
+      <div class="ambient-particles" id="ambient-particles"></div>
+
+      <!-- Ambient Steam Effect -->
+      <div class="ambient-steam"></div>
+
+      <!-- Large Logo Watermark -->
+      <div class="logo-watermark">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuADrgxvOnoAPz0sj8_m1EP09Q4TMK3xkfZw-CiqhfbUhcAIEwWJNozpzagZqBK4NpuSXM1PbXsYbfTroPQ_ByWYsQ667UKGg34K4X66y6ImCinwC2sjPNPRxGz_xh3FQ_eHetz7PClxE5ZMpVo1jZeTDFAWlcFMiJ0dCrPjYXGaOt6-uVulrRVwMeKe7CKReNoFCf3hhJ-GVh7uWljTwBZaCVOL4oLkCVdYyzEWR4nAOCIAYe95pi0vnblobrTFsQh0jjsV9Zrpol5O"
+          alt="Poley's Cafe Watermark Logo">
+      </div>
+
+      <!-- Main Content Grid -->
+      <div class="hero-grid-container">
+        <!-- Text Content -->
+        <div class="hero-text-col">
+          <!-- Rated Badge -->
+          <div class="rating-badge animate-fade-in">
+            <span class="rating-text">Hyderabad's Cozy Cafe Experience</span>
+          </div>
+
+          <!-- Title -->
+          <h1 class="hero-title animate-slide-up">POLEY'S CAFE</h1>
+
+          <!-- Subheadings -->
+          <div class="hero-subheadings animate-slide-up-delay-1">
+            <span>Coffee</span>
+            <span class="subheading-dot"></span>
+            <span>Conversations</span>
+            <span class="subheading-dot"></span>
+            <span>Comfort</span>
+          </div>
+
+          <!-- Supporting Text -->
+          <p class="hero-desc animate-slide-up-delay-2">Awake The Senses, Energize The Soul</p>
+
+          <!-- Action Buttons -->
+          <div class="hero-actions animate-slide-up-delay-3">
+            <a href="#menu" class="btn-primary">Explore Menu</a>
+            <a href="#visit" class="btn-secondary">Visit Us</a>
+          </div>
+        </div>
+
+        <!-- Premium Floating Card -->
+        <div class="hero-visual-col animate-fade-in-scale">
+          <div class="visual-card-wrapper">
+            <div class="visual-card">
+              <img src="./assets/img4.jpeg" alt="Latte Art Signature Coffee">
+            </div>
+            <!-- Glow Accent on the card -->
+            <div class="card-glow"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator"
+        onclick="document.getElementById('experience').scrollIntoView({ behavior: 'smooth' })">
+        <span class="scroll-indicator-text">Scroll to Experience</span>
+        <span class="material-symbols-outlined scroll-indicator-arrow">keyboard_double_arrow_down</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content Sections from code.html (excluding Navbar and Hero Header) -->
+  <div class="content-sections relative z-20 bg-background text-on-background font-body-lg antialiased">
+
+    <!-- Experience Section -->
+    <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-lowest relative z-20"
+      id="experience">
+      <div class="max-w-container-max mx-auto">
+        <div class="text-center mb-20 reveal">
+          <h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-4">The Signature
+            Experience</h2>
+          <div class="h-1 w-20 bg-tertiary-fixed-dim mx-auto rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center mb-section-gap reveal">
+          <div class="md:col-span-7 h-[600px] rounded-xl overflow-hidden shadow-2xl">
+            <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              alt="Master barista pouring latte art"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUdw3ABGtIFVVnFKW_juC0oERJ_mcULzFYpNIshxd067iIK94qhdAjTZj0y2t1fID9KsnOMOxQFSXuqtpRIOGGSRUM-f7oP-4h5mRHVlSAeAYg7yLrmOiQaCP4Nqtb7Pld88ojEfPLy7oXtOxmA7is1JomTVleO5yg8reY0Jod3IIRLjkivrGyVr6g0aJIU6KniCq3LNactjhdBIna9dQJ8iQYb0iw6dZx-i9A1SEmx7cNwvgXzPBUzO0jZ5EYhvMzZnY1RithyePB">
+          </div>
+          <div class="md:col-span-5 flex flex-col justify-center px-4 md:px-8">
+            <span
+              class="font-label-caps text-label-caps text-secondary uppercase mb-4 tracking-[0.2em]">Craftsmanship</span>
+            <h3 class="font-headline-lg text-headline-lg text-primary mb-6">Artistry in Every Cup</h3>
+            <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">We believe that coffee is more than a
+              beverage; it's a ritual. Our master baristas treat every extraction with reverence, sourcing only the
+              finest single-origin beans and orchestrating the perfect balance of flavor, aroma, and texture. This is
+              slow coffee, meant to be savored.</p>
+            <a class="text-primary font-label-caps text-label-caps uppercase border-b-2 border-tertiary-fixed-dim pb-1 w-max hover:border-primary transition-colors"
+              href="#menu">Explore the Menu</a>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center reveal">
+          <div class="md:col-span-5 order-2 md:order-1 flex flex-col justify-center px-4 md:px-8">
+            <span class="font-label-caps text-label-caps text-secondary uppercase mb-4 tracking-[0.2em]">Culinary
+              Focus</span>
+            <h3 class="font-headline-lg text-headline-lg text-primary mb-6">Beyond the Brew</h3>
+            <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Our kitchen echoes the dedication found at
+              our espresso bar. From artisanal pastries baked fresh at dawn to gourmet sandwiches and vibrant pastas,
+              our menu is a curated journey of comforting yet refined flavors, designed to complement your favorite
+              roast perfectly.</p>
+          </div>
+          <div class="md:col-span-7 order-1 md:order-2 h-[600px] rounded-xl overflow-hidden shadow-2xl">
+            <img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+              alt="Gourmet pasta and mocktail on cafe table"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-LcMQLnkR2BtGN3YaTQqGCjoh5cJlR9hdsk6_wtO4XHYI2bVrYNf_3LjVWR9VrmmpitgcjwZfn_3Xg8G6EVyDev1HiFQRLXvMxO3y17IGljjbd66_lQrLndciWYTb1_arxsOuwplP07cQ6DuppJvqLQjE5Oghkn8fac5mOu5Q1W1dpeFeR9vDcVzyokrJXc4rQQ264HtHv0B9bxPrEG15-qleDefI0tl-vOi2I61wbPKPQjDdj3ntzVQhXK_ih9Ni534qD0ylNXS0">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Menu Section -->
+    <!-- Featured Menu Section -->
+    <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface relative z-20" id="menu">
+      <div class="max-w-container-max mx-auto">
+
+        <!-- VIEW 1: Category Grid -->
+        <div id="menu-grid-view">
+          <div class="text-center mb-20 reveal">
+            <h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-4">Curated
+              Menu</h2>
+            <div class="h-1 w-20 bg-tertiary-fixed-dim mx-auto rounded-full"></div>
+            <p class="font-body-md text-on-surface-variant mt-4 max-w-lg mx-auto">Browse by category. Items and
+              prices shown are placeholders &mdash; real menu pending.</p>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 reveal" id="category-grid">
+            <!-- Category cards generated by JS from MENU_DATA -->
+          </div>
+        </div>
+
+        <!-- VIEW 2: Category Detail (DotPe-style) -->
+        <div id="menu-detail-view" class="hidden">
+          <div
+            class="border border-outline-variant/40 rounded-2xl overflow-hidden bg-surface-container-lowest shadow-lg">
+
+            <!-- Top bar -->
+            <div
+              class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 p-6 border-b border-outline-variant/30">
+              <h3 class="font-headline-lg text-xl text-primary">Poley's Cafe</h3>
+              <div class="flex items-center gap-3">
+                <div class="relative">
+                  <span
+                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">search</span>
+                  <input type="text" id="menu-search" placeholder="Search for items..."
+                    class="pl-10 pr-4 py-2 rounded-lg border border-outline-variant/50 bg-surface text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 w-full sm:w-56">
+                </div>
+                <label
+                  class="flex items-center gap-2 px-3 py-2 rounded-lg border border-outline-variant/50 bg-surface text-sm cursor-pointer select-none">
+                  Veg only
+                  <input type="checkbox" id="veg-only-toggle" class="accent-[#2e8b57] w-4 h-4">
+                </label>
+              </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row">
+              <!-- Sidebar -->
+              <aside class="md:w-56 border-b md:border-b-0 md:border-r border-outline-variant/30 p-6">
+                <button id="back-to-home-btn"
+                  class="flex items-center gap-2 text-xs font-label-caps uppercase tracking-wide text-secondary hover:text-primary transition-colors mb-6">
+                  <span class="material-symbols-outlined text-base">arrow_back</span> Back to Home
+                </button>
+                <h4 class="font-headline-lg text-lg text-primary mb-4">Menu</h4>
+                <ul id="category-sidebar" class="space-y-3 text-sm text-on-surface-variant">
+                  <!-- Sidebar links generated by JS -->
+                </ul>
+              </aside>
+
+              <!-- Item list -->
+              <div class="flex-1 p-8">
+                <h3 id="active-category-title"
+                  class="font-headline-lg text-2xl text-primary mb-1 pb-2 border-b-2 border-primary inline-block">
+                  Dessert</h3>
+                <div id="active-category-items" class="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-6 mt-8">
+                  <!-- Items generated by JS -->
+                </div>
+                <p id="no-items-msg" class="hidden text-on-surface-variant text-sm mt-6">No items match your
+                  search.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <script>
+      // ---- Placeholder menu data. Replace with real items/prices from DotPe. ----
+      const MENU_DATA = {
+        "Hot Coffee": {
+          veg: true,
+          items: [
+            { name: "Espresso", price: 99, veg: true },
+            { name: "Cappuccino", price: 179, veg: true },
+            { name: "Cafe Latte", price: 189, veg: true },
+            { name: "Spanish Latte", price: 209, veg: true },
+            { name: "Flat White", price: 179, veg: true },
+            { name: "Mocha", price: 199, veg: true },
+            { name: "Long Black", price: 149, veg: true },
+            { name: "Cartado", price: 149, veg: true },
+            { name: "Doppio", price: 139, veg: true },
+            { name: "Affagato", price: 149, veg: true },
+            { name: "White Chocolate Cappuccino", price: 209, veg: true }
+          ]
+        },
+
+        "Iced Coffee": {
+          veg: true,
+          items: [
+            { name: "Iced Cranberry Coffee", price: 179, veg: true },
+            { name: "Iced Americano", price: 159, veg: true },
+            { name: "Iced Coffee", price: 179, veg: true },
+            { name: "Vietnamese Iced Latte", price: 189, veg: true },
+            { name: "Iced Caramel Latte", price: 179, veg: true },
+            { name: "Iced Mocha", price: 179, veg: true },
+            { name: "Tiramisu Iced Latte", price: 209, veg: true }
+          ]
+        },
+
+        "Teas": {
+          veg: true,
+          items: [
+            { name: "English Breakfast Tea", price: 109, veg: true },
+            { name: "Chamomile Tea", price: 129, veg: true },
+            { name: "Green Tea", price: 99, veg: true },
+            { name: "Hibiscus Tea", price: 129, veg: true }
+          ]
+        },
+
+        "Non-Coffee": {
+          veg: true,
+          items: [
+            { name: "Hot Matcha Latte", price: 199, veg: true },
+            { name: "Coconut Matcha", price: 219, veg: true },
+            { name: "Strawberry Matcha", price: 209, veg: true },
+            { name: "Iced Matcha Latte", price: 209, veg: true },
+            { name: "Mango Matcha Latte", price: 209, veg: true },
+            { name: "Signature Hot Chocolate", price: 179, veg: true },
+            { name: "Poley's Special Pistachio", price: 179, veg: true }
+          ]
+        },
+
+        "Cold Brew": {
+          veg: true,
+          items: [
+            { name: "Cold Brew Black", price: 199, veg: true },
+            { name: "Vancia Orange Cold Brew", price: 209, veg: true },
+            { name: "Apple Cold Brew", price: 209, veg: true },
+            { name: "Cranberry Cold Brew", price: 209, veg: true }
+          ]
+        },
+
+        "Manual Brew": {
+          veg: true,
+          items: [
+            { name: "Pour Over", price: 199, veg: true },
+            { name: "French Press", price: 199, veg: true },
+            { name: "Aero Press", price: 199, veg: true }
+          ]
+        },
+
+        "Blended Cold Coffee": {
+          veg: true,
+          items: [
+            { name: "Peanut Butter Cold Coffee", price: 209, veg: true },
+            { name: "Classic Cold Coffee", price: 199, veg: true },
+            { name: "Poley's Cafe Special", price: 209, veg: true },
+            { name: "Hazelnut Cream Frappe", price: 219, veg: true },
+            { name: "Biscoff Cream Frappe", price: 209, veg: true },
+            { name: "Nutella Frappe", price: 189, veg: true }
+          ]
+        },
+
+        "Milk Shakes": {
+          veg: true,
+          items: [
+            { name: "Kit Kat Shake", price: 219, veg: true },
+            { name: "Classic Oreo Shake", price: 219, veg: true },
+            { name: "Poley's Cafe Special Shake", price: 239, veg: true },
+            { name: "Vanilla Shake", price: 199, veg: true },
+            { name: "Chocolate Shake", price: 209, veg: true },
+            { name: "Nutella Shake", price: 239, veg: true },
+            { name: "Brownie Shake", price: 219, veg: true }
+          ]
+        },
+
+        "Iced Teas": {
+          veg: true,
+          items: [
+            { name: "Peach Iced Tea", price: 119, veg: true },
+            { name: "Lemon Iced Tea", price: 119, veg: true },
+            { name: "Strawberry Iced Tea", price: 109, veg: true },
+            { name: "Hibiscus Iced Tea", price: 109, veg: true },
+            { name: "Cranberry Iced Tea", price: 109, veg: true }
+          ]
+        },
+
+        "Smoothies": {
+          veg: true,
+          items: [
+            { name: "Avocado Banana Smoothie", price: 109, veg: true },
+            { name: "Strawberry Smoothie", price: 129, veg: true },
+            { name: "Mango Smoothie", price: 99, veg: true },
+            { name: "Dry Fruit Smoothie", price: 129, veg: true }
+          ]
+        },
+
+        "Mocktails": {
+          veg: true,
+          items: [
+            { name: "Virgin Mojito", price: 199, veg: true },
+            { name: "Blue Berry Mojito", price: 209, veg: true },
+            { name: "Strawberry Mojito", price: 219, veg: true },
+            { name: "Orange Mojito", price: 209, veg: true },
+            { name: "Mango Mojito", price: 219, veg: true },
+            { name: "Passion Fruit Mojito", price: 219, veg: true },
+            { name: "Blue Ocean Mojito", price: 219, veg: true },
+            { name: "Hibiscus Watermelon Mojito", price: 209, veg: true }
+          ]
+        },
+
+        "Chinese Veg Starters": {
+          veg: true,
+          items: [
+            { name: "Veg Manchurian", price: 239, veg: true },
+            { name: "Paneer Manchurian", price: 229, veg: true },
+            { name: "Chilli Paneer", price: 219, veg: true },
+            { name: "Paneer 65", price: 229, veg: true },
+            { name: "Paneer Majestic", price: 219, veg: true },
+            { name: "Chilli Basil Paneer", price: 229, veg: true },
+            { name: "Mushroom Manchurian", price: 239, veg: true },
+            { name: "Chilli Mushroom", price: 229, veg: true },
+            { name: "Mushroom Salt & Pepper", price: 219, veg: true },
+            { name: "Chilli Basil Mushroom", price: 239, veg: true },
+            { name: "Stuffed Chilli Mushroom", price: 219, veg: true },
+            { name: "Crispy Corn", price: 219, veg: true },
+            { name: "Honey Chilli Potato", price: 219, veg: true },
+            { name: "Honey Chilli Lotus Stem", price: 239, veg: true },
+            { name: "Crispy Baby Corn", price: 229, veg: true },
+            { name: "Crispy Chilli Baby Corn", price: 239, veg: true },
+            { name: "Baby Corn Manchurian", price: 249, veg: true },
+            { name: "Baby Corn Salt & Pepper", price: 229, veg: true },
+            { name: "Money Bag Veg", price: 239, veg: true },
+            { name: "Spring Roll", price: 229, veg: true }
+          ]
+        },
+
+        "Chinese Non-Veg Starters": {
+          veg: false,
+          items: [
+            { name: "Chicken Manchurian", price: 249, veg: false },
+            { name: "Chicken 65", price: 249, veg: false },
+            { name: "Chilli Chicken", price: 269, veg: false },
+            { name: "Chicken Majestic", price: 279, veg: false },
+            { name: "Chilli Basil Chicken", price: 289, veg: false },
+            { name: "Kung Pao Chicken", price: 259, veg: false },
+            { name: "Thai Pai Chicken", price: 269, veg: false },
+            { name: "Korean Chicken Wings", price: 279, veg: false },
+            { name: "Drums Of Heaven", price: 289, veg: false },
+            { name: "Pepper Chicken", price: 279, veg: false }
+          ]
+        },
+
+        "Chinese Main Course": {
+          veg: false,
+          items: [
+            { name: "Burnt Garlic Fried Rice (Veg)", price: 229, veg: true },
+            { name: "Burnt Garlic Fried Rice (Non Veg)", price: 289, veg: false },
+            { name: "Burnt Garlic Noodles (Veg)", price: 249, veg: true },
+            { name: "Burnt Garlic Noodles (Non Veg)", price: 289, veg: false },
+            { name: "Shanghai Fried Rice (Veg)", price: 239, veg: true },
+            { name: "Shanghai Fried Rice (Non Veg)", price: 309, veg: false },
+            { name: "Shanghai Noodles (Veg)", price: 239, veg: true },
+            { name: "Shanghai Noodles (Non Veg)", price: 289, veg: false },
+            { name: "Schezwan Fried Rice (Veg)", price: 249, veg: true },
+            { name: "Schezwan Fried Rice (Non Veg)", price: 329, veg: false },
+            { name: "Schezwan Noodles (Veg)", price: 249, veg: true },
+            { name: "Schezwan Noodles (Non Veg)", price: 329, veg: false }
+          ]
+        }
+      };
+
+      const gridView = document.getElementById('menu-grid-view');
+      const detailView = document.getElementById('menu-detail-view');
+      const categoryGrid = document.getElementById('category-grid');
+      const categorySidebar = document.getElementById('category-sidebar');
+      const activeTitle = document.getElementById('active-category-title');
+      const activeItems = document.getElementById('active-category-items');
+      const searchInput = document.getElementById('menu-search');
+      const vegToggle = document.getElementById('veg-only-toggle');
+      const noItemsMsg = document.getElementById('no-items-msg');
+      const backBtn = document.getElementById('back-to-home-btn');
+
+      let currentCategory = "Dessert";
+
+      function buildCategoryGrid() {
+        categoryGrid.innerHTML = '';
+        Object.keys(MENU_DATA).forEach(cat => {
+          const card = document.createElement('button');
+          card.className = "group relative h-44 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-gradient-to-b from-outline-variant/40 to-on-background/80 flex items-end p-4 text-left";
+          card.innerHTML = `<span class="relative z-10 font-headline-lg text-white text-lg">${cat}</span>`;
+          card.addEventListener('click', () => openCategory(cat));
+          categoryGrid.appendChild(card);
+        });
+      }
+
+      function buildSidebar() {
+        categorySidebar.innerHTML = '';
+        Object.keys(MENU_DATA).forEach(cat => {
+          const li = document.createElement('li');
+          const btn = document.createElement('button');
+          btn.textContent = cat;
+          btn.className = "text-left w-full hover:text-primary transition-colors";
+          btn.dataset.cat = cat;
+          btn.addEventListener('click', () => setActiveCategory(cat));
+          li.appendChild(btn);
+          categorySidebar.appendChild(li);
+        });
+      }
+
+      function setActiveCategory(cat) {
+        currentCategory = cat;
+        activeTitle.textContent = cat;
+        [...categorySidebar.querySelectorAll('button')].forEach(b => {
+          b.classList.toggle('text-primary', b.dataset.cat === cat);
+          b.classList.toggle('font-semibold', b.dataset.cat === cat);
+          b.style.borderLeft = b.dataset.cat === cat ? '2px solid var(--tw-text-opacity, currentColor)' : 'none';
+        });
+        renderItems();
+      }
+
+      function renderItems() {
+        const data = MENU_DATA[currentCategory];
+        const query = searchInput.value.trim().toLowerCase();
+        const vegOnly = vegToggle.checked;
+        activeItems.innerHTML = '';
+
+        const filtered = data.items.filter(it => {
+          const matchesSearch = it.name.toLowerCase().includes(query);
+          const matchesVeg = !vegOnly || it.veg;
+          return matchesSearch && matchesVeg;
+        });
+
+        if (filtered.length === 0) {
+          noItemsMsg.classList.remove('hidden');
+        } else {
+          noItemsMsg.classList.add('hidden');
+        }
+
+        filtered.forEach(item => {
+          const row = document.createElement('div');
+          row.className = "border-b border-dashed border-outline-variant/50 pb-4";
+          const priceDisplay = item.price !== null ? `&#8377;${item.price}` : '<span class="opacity-60">[TODO: price]</span>';
+          row.innerHTML = `
+            <div class="flex items-center gap-2 mb-2">
+              <span class="inline-block w-4 h-4 border-2 ${item.veg ? 'border-green-600' : 'border-red-600'} rounded-sm relative">
+                <span class="absolute inset-0.5 rounded-sm ${item.veg ? 'bg-green-600' : 'bg-red-600'}"></span>
+              </span>
+              <span class="font-medium text-on-surface">${item.name}</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-on-surface-variant">${priceDisplay}</span>
+              <button class="border border-outline-variant rounded-lg px-5 py-1.5 text-xs font-bold uppercase hover:bg-primary hover:text-on-primary transition-colors">Add</button>
+            </div>`;
+          activeItems.appendChild(row);
+        });
+      }
+
+      function openCategory(cat) {
+        gridView.classList.add('hidden');
+        detailView.classList.remove('hidden');
+        setActiveCategory(cat);
+        detailView.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      backBtn.addEventListener('click', () => {
+        detailView.classList.add('hidden');
+        gridView.classList.remove('hidden');
+        gridView.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+
+      searchInput.addEventListener('input', renderItems);
+      vegToggle.addEventListener('change', renderItems);
+
+      buildCategoryGrid();
+      buildSidebar();
+    </script>
+    <!-- Why People Love Poley's -->
+    <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low relative z-20">
+      <div class="max-w-container-max mx-auto">
+        <div class="text-center mb-16 reveal">
+          <h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-4">Why They Love Us
+          </h2>
+          <div class="h-1 w-20 bg-tertiary-fixed-dim mx-auto rounded-full mb-8"></div>
+          <div class="flex flex-wrap justify-center gap-8 md:gap-16 mb-12">
+            <div class="text-center">
+              <span class="font-display-lg text-4xl md:text-5xl text-primary block mb-2">10k+</span>
+              <span class="font-label-caps text-label-caps uppercase text-secondary">Happy Customers</span>
+            </div>
+            <div class="text-center">
+              <span class="font-display-lg text-4xl md:text-5xl text-primary block mb-2">4.8</span>
+              <span class="font-label-caps text-label-caps uppercase text-secondary">Star Rating</span>
+            </div>
+            <div class="text-center">
+              <span class="font-display-lg text-4xl md:text-5xl text-primary block mb-2">5+</span>
+              <span class="font-label-caps text-label-caps uppercase text-secondary">Years of Brewing</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 reveal">
+          <!-- Testimonial 1 -->
+          <div class="bg-surface-container-lowest p-8 rounded-xl shadow-md border border-outline-variant/30">
+            <div class="flex items-center gap-2 mb-4 text-tertiary-fixed-dim">
+              <span class="material-symbols-outlined fill-current">star</span>
+              <span class="material-symbols-outlined fill-current">star</span>
+              <span class="material-symbols-outlined fill-current">star</span>
+              <span class="material-symbols-outlined fill-current">star</span>
+              <span class="material-symbols-outlined fill-current">star</span>
+            </div>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-6 italic">"Absolutely the best coffee in
+              town. The atmosphere is perfect for working or catching up with friends. Their pasta is a hidden gem too!"
+            </p>
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold">
+                A</div>
+              <div>
+                <p class="font-bold text-on-surface">Arjun K.</p>
+                <p class="text-xs text-secondary">Local Guide</p>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 2 -->
+          <div class="bg-surface-container-lowest p-8 rounded-xl shadow-md border border-outline-variant/30">
+            <div class="flex items-center gap-2 mb-4 text-tertiary-fixed-dim">
+              <span class="material-symbols-outlined fill-current">star</span>
+              <span class="material-symbols-outlined fill-current">star</span>
+              <span class="material-symbols-outlined fill-current">star</span>
+              <span class="material-symbols-outlined fill-current">star</span>
+              <span class="material-symbols-outlined fill-current">star</span>
+            </div>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-6 italic">"Aesthetically pleasing and
+              culinarily satisfying. The mocktails are so refreshing and the seating is incredibly cozy. Highly
+              recommend."</p>
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold">
+                S</div>
+              <div>
+                <p class="font-bold text-on-surface">Sneha R.</p>
+                <p class="text-xs text-secondary">Food Blogger</p>
+              </div>
+            </div>
+          </div>
+          <!-- Testimonial 3 -->
+          <div class="bg-surface-container-lowest p-8 rounded-xl shadow-md border border-outline-variant/30">
+            <div class="flex items-center gap-2 mb-4 text-tertiary-fixed-dim">
+              <span class="material-symbols-outlined fill-current">star</span>
+              <span class="material-symbols-outlined fill-current">star</span>
+              <span class="material-symbols-outlined fill-current">star</span>
+              <span class="material-symbols-outlined fill-current">star</span>
+              <span class="material-symbols-outlined fill-current">star</span>
+            </div>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-6 italic">"Found my new favorite weekend
+              spot. The staff is welcoming and the attention to detail in every cup is remarkable. Top tier cafe
+              experience."</p>
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold">
+                V</div>
+              <div>
+                <p class="font-bold text-on-surface">Vikram M.</p>
+                <p class="text-xs text-secondary">Regular</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Gallery Experience -->
+    <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface relative z-20" id="gallery">
+      <div class="max-w-container-max mx-auto">
+        <div class="text-center mb-20 reveal">
+          <h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-4">Visual Diary</h2>
+          <div class="h-1 w-20 bg-tertiary-fixed-dim mx-auto rounded-full"></div>
+        </div>
+
+        <!-- FIX: Changed from columns to a strict grid layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
+
+          <!-- Card Item -->
+          <div class="rounded-xl overflow-hidden shadow-lg group aspect-square">
+            <img alt="Cafe Interior"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              src="./assets/img7.jpeg">
+          </div>
+
+          <div class="rounded-xl overflow-hidden shadow-lg group aspect-square">
+            <img alt="Coffee Pour"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              src="./assets/img1.jpeg">
+          </div>
+
+          <div class="rounded-xl overflow-hidden shadow-lg group aspect-square">
+            <img alt="Pastries"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              src="./assets/sandwich.jpg">
+          </div>
+
+          <div class="rounded-xl overflow-hidden shadow-lg group aspect-square">
+            <img alt="Cafe Seating"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              src="./assets/img3.jpeg">
+          </div>
+
+          <div class="rounded-xl overflow-hidden shadow-lg group aspect-square">
+            <img alt="Latte Art"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              src="./assets/img4.jpeg">
+          </div>
+
+          <div class="rounded-xl overflow-hidden shadow-lg group aspect-square">
+            <img alt="Cafe Ambiance"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              src="./assets/img5.jpeg">
+          </div>
+
+          <div class="rounded-xl overflow-hidden shadow-lg group aspect-square">
+            <img alt="Cafe Interior"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              src="./assets/img6.jpeg">
+          </div>
+
+          <div class="rounded-xl overflow-hidden shadow-lg group aspect-square">
+            <img alt="Cafe Interior"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              src="./assets/img8.jpeg">
+          </div>
+
+          <div class="rounded-xl overflow-hidden shadow-lg group aspect-square">
+            <img alt="Cafe Interior"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              src="./assets/pizza.jpg">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visit Us -->
+    <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface relative z-20" id="visit">
+      <div class="max-w-container-max mx-auto">
+        <div class="text-center mb-20 reveal">
+          <h2 class="font-headline-xl text-headline-lg-mobile md:text-headline-xl text-primary mb-4">Find Your Table
+          </h2>
+          <div class="h-1 w-20 bg-tertiary-fixed-dim mx-auto rounded-full"></div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 lg:grid-cols-12 gap-8 bg-surface-container-lowest rounded-2xl overflow-hidden shadow-xl reveal">
+          <div class="lg:col-span-7 bg-outline-variant/20 relative min-h-[400px]">
+            <iframe src="https://www.google.com/maps?q=8HH3%2BHJ+Hyderabad,+Telangana&output=embed"
+              class="absolute inset-0 w-full h-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Poley's Cafe location"></iframe>
+          </div>
+          <div class="lg:col-span-5 p-10 flex flex-col justify-center">
+            <h3 class="font-headline-lg text-2xl text-primary mb-6">Poley's Cafe, Hastinapuram</h3>
+            <div class="flex items-start gap-4 mb-6">
+              <span class="material-symbols-outlined text-tertiary-fixed-dim mt-1">location_on</span>
+              <div>
+                <p class="font-bold text-on-surface">Address</p>
+                <p class="text-on-surface-variant">8a, Nagarjuna Sagar Rd, above V9 Fitness Station,<br>Shirdi Sai
+                  Nagar, Hasthinapuram Central,<br>Hyderabad, Telangana 500079</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 mb-6">
+              <span class="material-symbols-outlined text-tertiary-fixed-dim mt-1">schedule</span>
+              <div>
+                <p class="font-bold text-on-surface">Opening Hours</p>
+                <p class="text-on-surface-variant">Open daily &middot; Closes 12 AM<br><span
+                    class="text-xs uppercase tracking-wide opacity-70">Opens 12 PM</span></p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 mb-8">
+              <span class="material-symbols-outlined text-tertiary-fixed-dim mt-1">call</span>
+              <div>
+                <p class="font-bold text-on-surface">Contact</p>
+                <p class="text-on-surface-variant uppercase text-sm tracking-wide opacity-70">+91
+                  9121612356<br>poleyscafe.in@gmail.com</p>
+              </div>
+            </div>
+            <a class="bg-primary text-on-primary font-label-caps text-label-caps uppercase px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors text-center w-full block"
+              href="https://maps.app.goo.gl/oaFLpGMhZ8nJDSSM7" target="_blank" rel="noopener">Get Directions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section class="py-20 px-2 bg-surface-container-low relative z-20">
+      <div class="text-center mb-10 reveal">
+        <h3 class="font-headline-lg text-xl text-primary mb-2"> 📸 @poleys.cafe</h3>
+        <p class="font-body-md text-on-surface-variant">Follow our daily brew</p>
+      </div>
+
+      <div class="flex flex-wrap md:flex-nowrap gap-2 overflow-hidden max-w-[1600px] mx-auto reveal">
+        <div class="w-1/2 md:w-1/4 lg:w-1/5 aspect-square relative group overflow-hidden">
+          <img alt="Insta 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            src="./assets/img6.jpeg">
+          <div
+            class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="material-symbols-outlined text-white text-3xl">favorite</span>
+          </div>
+        </div>
+        <div class="w-1/2 md:w-1/4 lg:w-1/5 aspect-square relative group overflow-hidden">
+          <img alt="Insta 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            src="./assets/img1.jpeg">
+          <div
+            class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="material-symbols-outlined text-white text-3xl">favorite</span>
+          </div>
+        </div>
+        <div class="w-1/2 md:w-1/4 lg:w-1/5 aspect-square relative group overflow-hidden">
+          <img alt="Insta 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            src="./assets/logoimg.jpg">
+          <div
+            class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="material-symbols-outlined text-white text-3xl">favorite</span>
+          </div>
+        </div>
+        <div class="w-1/2 md:w-1/4 lg:w-1/5 aspect-square relative group overflow-hidden hidden md:block">
+          <img alt="Insta 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            src="./assets/img2.jpeg">
+          <div
+            class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="material-symbols-outlined text-white text-3xl">favorite</span>
+          </div>
+        </div>
+        <div class="hidden lg:block w-1/5 aspect-square relative group overflow-hidden">
+          <img alt="Insta 5" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            src="./assets/img3.jpeg">
+          <div
+            class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <span class="material-symbols-outlined text-white text-3xl">favorite</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-primary dark:bg-primary-container w-full py-section-gap px-margin-mobile md:px-margin-desktop mt-auto relative z-20">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto reveal">
+        <div class="col-span-1 md:col-span-2">
+          <h4 class="font-display-xl text-display-lg text-surface-container-lowest mb-6 flex items-center gap-4">
+            <img alt="Logo" class="w-16 h-16 rounded-full"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuADrgxvOnoAPz0sj8_m1EP09Q4TMK3xkfZw-CiqhfbUhcAIEwWJNozpzagZqBK4NpuSXM1PbXsYbfTroPQ_ByWYsQ667UKGg34K4X66y6ImCinwC2sjPNPRxGz_xh3FQ_eHetz7PClxE5ZMpVo1jZeTDFAWlcFMiJ0dCrPjYXGaOt6-uVulrRVwMeKe7CKReNoFCf3hhJ-GVh7uWljTwBZaCVOL4oLkCVdYyzEWR4nAOCIAYe95pi0vnblobrTFsQh0jjsV9Zrpol5O">
+            Poley's Cafe
+          </h4>
+          <p class="font-body-md text-body-md text-on-primary/70 mb-8 max-w-sm">Awake the Senses, Energize the Soul. A
+            sanctuary for coffee lovers and conversationalists in the heart of Hyderabad.</p>
+          <a class="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-lg font-label-caps text-label-caps uppercase hover:opacity-90 transition-opacity"
+            href="#">
+            <span class="material-symbols-outlined">chat</span>
+            WhatsApp Us
+          </a>
+        </div>
+        <div>
+          <h5 class="font-headline-lg text-headline-lg-mobile text-on-primary mb-6">Explore</h5>
+          <ul class="space-y-4 font-body-md text-body-md text-on-primary/70">
+            <li><a class="hover:text-on-primary hover:translate-x-1 transition-transform duration-300 inline-block"
+                href="#menu">Menu</a></li>
+            <li><a class="hover:text-on-primary hover:translate-x-1 transition-transform duration-300 inline-block"
+                href="#reservation">Reservation</a></li>
+            <li><a class="hover:text-on-primary hover:translate-x-1 transition-transform duration-300 inline-block"
+                href="#events">Private Events</a></li>
+            <li><a class="hover:text-on-primary hover:translate-x-1 transition-transform duration-300 inline-block"
+                href="#careers">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-headline-lg text-headline-lg-mobile text-on-primary mb-6">Connect</h5>
+          <div class="flex gap-4 text-on-primary/70 mb-8">
+            <a class="hover:text-on-primary transition-colors" href="#"><span
+                class="material-symbols-outlined text-3xl">photo_camera</span></a>
+            <a class="hover:text-on-primary transition-colors" href="#"><span
+                class="material-symbols-outlined text-3xl">face_nod</span></a>
+            <a class="hover:text-on-primary transition-colors" href="#"><span
+                class="material-symbols-outlined text-3xl">mail</span></a>
+            <a class="hover:text-on-primary transition-colors" href="#"><span
+                class="material-symbols-outlined text-3xl">map</span></a>
+          </div>
+          <a class="font-body-md text-body-md text-on-primary/70 hover:text-on-primary underline text-sm block mb-2"
+            href="#">Get Directions (Maps)</a>
+          <a class="font-body-md text-body-md text-on-primary/70 hover:text-on-primary underline text-sm"
+            href="#">Privacy Policy</a>
+        </div>
+      </div>
+      <div
+        class="max-w-container-max mx-auto mt-20 pt-8 border-t border-on-primary/10 text-center font-body-md text-body-md text-on-primary/50 text-sm reveal">
+        © 2024 Poley's Cafe Hyderabad. Awake the Senses.
+      </div>
+    </footer>
+  </div>
+
+  <!-- Main Scripts -->
+  <script type="module" src="/main.js"></script>
+  <script>
+    // Scroll Reveal Logic
+    function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 100;
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        }
+      }
+    }
+    window.addEventListener("scroll", reveal);
+    reveal(); // Trigger on load
+  </script>
+</body>
+
+</html>
