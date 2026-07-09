@@ -668,7 +668,7 @@
         [...categorySidebar.querySelectorAll('button')].forEach(b => {
           b.classList.toggle('text-primary', b.dataset.cat === cat);
           b.classList.toggle('font-semibold', b.dataset.cat === cat);
-          b.style.borderLeft = b.dataset.cat === cat ? '2px solid var(--tw-text-opacity, currentColor)' : 'none';
+          b.style.borderLeft = '';
         });
         renderItems();
       }

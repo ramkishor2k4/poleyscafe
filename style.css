@@ -904,21 +904,37 @@ body {
     gap: 0.5rem !important;
     padding-bottom: 0.5rem !important;
     scrollbar-width: none !important;
+    /* Kill the space-y-3 vertical margin Tailwind adds to li items */
+    margin-top: 0 !important;
   }
   #category-sidebar::-webkit-scrollbar { display: none; }
-  #category-sidebar li { flex-shrink: 0 !important; }
+  #category-sidebar li {
+    flex-shrink: 0 !important;
+    /* Override space-y-3 which adds margin-top to all but first child */
+    margin-top: 0 !important;
+  }
   #category-sidebar li button {
-    padding: 0.3rem 0.9rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    height: 32px !important;           /* fixed height so all pills are identical */
+    padding: 0 0.9rem !important;
     border: 1px solid rgba(0,0,0,0.18) !important;
+    border-left: 1px solid rgba(0,0,0,0.18) !important; /* override JS inline border-left */
     border-radius: 999px !important;
     font-size: 0.78rem !important;
     white-space: nowrap !important;
-    background: white;
+    background: white !important;
+    color: #414845 !important;
+    line-height: 1 !important;
+    vertical-align: middle !important;
   }
-  #category-sidebar li button.text-primary {
+  #category-sidebar li button.text-primary,
+  #category-sidebar li button.font-semibold {
     background: #001d14 !important;
     color: white !important;
     border-color: #001d14 !important;
+    border-left-color: #001d14 !important;
+    font-weight: 600 !important;
   }
 
   /* Menu detail: aside stacks above items */
