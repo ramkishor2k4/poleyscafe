@@ -887,3 +887,72 @@ body {
     border-radius: 16px !important;
   }
 }
+
+/* ── Menu sidebar: horizontal pill-scroll on mobile ── */
+@media (max-width: 768px) {
+
+  /* Aside stacks above items, full width */
+  .menu-detail-aside {
+    width: 100% !important;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(0,0,0,0.1) !important;
+    padding: 0.75rem 1rem !important;
+  }
+
+  /* Hide the "Back to Home" label and "Menu" heading to save space */
+  .menu-detail-aside h4 { display: none !important; }
+
+  /* Category list → horizontal pill-scroll row */
+  #category-sidebar {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    gap: 8px !important;
+    padding: 4px 0 10px !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    /* Kill space-y-3 vertical margins */
+    margin-top: 0 !important;
+  }
+  #category-sidebar::-webkit-scrollbar { display: none; }
+
+  #category-sidebar li {
+    flex-shrink: 0 !important;
+    margin-top: 0 !important;  /* override space-y-3 */
+  }
+
+  #category-sidebar li button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 30px !important;
+    padding: 0 12px !important;
+    border: 1px solid rgba(0,0,0,0.18) !important;
+    border-left: 1px solid rgba(0,0,0,0.18) !important;
+    border-radius: 999px !important;
+    font-size: 0.75rem !important;
+    white-space: nowrap !important;
+    background: #fff !important;
+    color: #374151 !important;
+    line-height: 1 !important;
+    scroll-snap-align: start !important;
+  }
+
+  /* Active pill */
+  #category-sidebar li button.text-primary,
+  #category-sidebar li button.font-semibold {
+    background: #0E3A35 !important;
+    color: #fff !important;
+    border-color: #0E3A35 !important;
+    border-left-color: #0E3A35 !important;
+    font-weight: 600 !important;
+  }
+
+  /* Item panel: reduce padding */
+  #active-category-items {
+    grid-template-columns: 1fr !important;
+  }
+}

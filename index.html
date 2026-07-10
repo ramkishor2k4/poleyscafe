@@ -141,6 +141,18 @@
     </div>
   </div>
 
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <button class="drawer-close" id="drawer-close" aria-label="Close menu">&times;</button>
+    <a href="#" onclick="closeMobileDrawer()">Home</a>
+    <a href="#experience" onclick="closeMobileDrawer()">Story</a>
+    <a href="#menu" onclick="closeMobileDrawer()">Menu</a>
+    <a href="#gallery" onclick="closeMobileDrawer()">Gallery</a>
+    <a href="#reviews" onclick="closeMobileDrawer()">Reviews</a>
+    <a href="#visit" onclick="closeMobileDrawer()">Visit Us</a>
+    <a href="#menu" class="drawer-cta" onclick="closeMobileDrawer()">Explore Menu</a>
+  </div>
+
   <!-- Floating Glass Navigation Bar -->
   <nav id="floating-navbar" class="floating-navbar" role="navigation" aria-label="Main Navigation">
     <a class="flex items-center gap-3 hover:opacity-95 transition-opacity" href="#">
@@ -344,11 +356,7 @@
   Order Online
   <span class="material-symbols-outlined text-base" style="font-size:16px;">arrow_forward</span>
 </a>
-<a href="#" data-open-reservation
-  class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-on-primary text-sm font-semibold whitespace-nowrap hover:opacity-90 transition-opacity">
-  Reserve a table
-  <span class="material-symbols-outlined text-base" style="font-size:16px;">arrow_forward</span>
-</a>
+
               </div>
             </div>
 
