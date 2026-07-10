@@ -857,3 +857,26 @@ body {
     overflow: hidden !important;
   }
 }
+
+/* ── Reviews: horizontal scroll on mobile only ── */
+@media (max-width: 768px) {
+  #reviews-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    gap: 14px !important;
+    padding: 0 16px 16px !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+  }
+  #reviews-grid::-webkit-scrollbar { display: none; }
+
+  #reviews-grid .review-card {
+    flex: 0 0 80vw !important;
+    width: 80vw !important;
+    scroll-snap-align: start !important;
+    border-radius: 16px !important;
+  }
+}
