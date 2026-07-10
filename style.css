@@ -956,3 +956,57 @@ body {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* ── Mobile drawer — full screen overlay ── */
+.mobile-drawer {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;          /* must be above navbar z-index: 999 */
+  background: rgba(5, 20, 16, 0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.8rem;
+}
+.mobile-drawer.open {
+  display: flex;
+}
+.mobile-drawer a {
+  font-family: 'Epilogue', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: rgba(248, 245, 240, 0.82);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.mobile-drawer a:hover,
+.mobile-drawer a:active {
+  color: var(--secondary);
+}
+.mobile-drawer .drawer-cta {
+  color: var(--secondary);
+  border: 1px solid rgba(201,138,75,0.5);
+  padding: 0.6rem 1.8rem;
+  border-radius: 0.75rem;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+.drawer-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: transparent;
+  border: none;
+  color: rgba(248, 245, 240, 0.7);
+  font-size: 2.2rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+  transition: color 0.2s;
+}
+.drawer-close:hover { color: var(--secondary); }
