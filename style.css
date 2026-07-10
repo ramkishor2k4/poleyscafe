@@ -812,175 +812,23 @@ body {
   -webkit-text-stroke: 1px currentColor;
   color: transparent;
 }
-/* ==========================================================================
-   MOBILE RESPONSIVE — COMPREHENSIVE FIX
-   Target: all screens ≤ 768px
-   ========================================================================== */
-
-/* ---- Mobile nav drawer ---- */
-.mobile-drawer {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(7, 11, 17, 0.97);
-  z-index: 1000;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  backdrop-filter: blur(12px);
-}
-.mobile-drawer.open { display: flex; }
-.mobile-drawer a {
-  font-family: var(--font-body);
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: rgba(248,245,240,0.82);
-  text-decoration: none;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  transition: color 0.2s;
-}
-.mobile-drawer a:hover { color: var(--primary); }
-.mobile-drawer .drawer-cta {
-  color: var(--primary);
-  border: 1px solid rgba(255,155,80,0.5);
-  padding: 0.65rem 1.8rem;
-  border-radius: 0.75rem;
-  font-size: 0.82rem;
-  margin-top: 0.5rem;
-}
-.drawer-close {
-  position: absolute;
-  top: 1.5rem; right: 1.5rem;
-  background: transparent;
-  border: none;
-  color: rgba(248,245,240,0.7);
-  font-size: 2rem;
-  cursor: pointer;
-  line-height: 1;
-  padding: 0.25rem;
-}
-.drawer-close:hover { color: var(--primary); }
-
-@media (max-width: 768px) {
-
-  /* Navbar */
-  .floating-navbar { padding: 0.7rem 1.1rem; top: 0.6rem; width: 94%; }
-  .floating-navbar.scrolled { padding: 0.6rem 1.1rem; }
-  .navbar-cta { display: none; }   /* hide CTA in nav on mobile, it's in the drawer */
-
-  /* Hero title: already 3.5rem from existing rule, tighten further on small */
-  .hero-title { font-size: clamp(2rem, 11vw, 3.5rem) !important; }
-  .hero-subheadings { font-size: clamp(1rem, 5vw, 1.4rem) !important; }
-  .hero-desc { font-size: 0.92rem !important; margin-bottom: 1.5rem !important; }
-  .hero-actions { gap: 0.85rem; flex-wrap: wrap; }
-  .btn-primary, .btn-secondary {
-    padding: 0.8rem 1.4rem !important;
-    font-size: 0.75rem !important;
-    flex: 1; min-width: 120px; text-align: center;
-  }
-  .hero-grid-container { padding-top: 5rem; gap: 1.5rem; }
-
-  /* Section gaps: 160px → 48px on mobile */
-  .py-section-gap { padding-top: 3rem !important; padding-bottom: 3rem !important; }
-  .mb-section-gap { margin-bottom: 2.5rem !important; }
-  .mb-20 { margin-bottom: 2rem !important; }
-
-  /* Experience images: fixed 600px height breaks on mobile */
-  .h-\[600px\] { height: 240px !important; }
-
-  /* Experience text padding */
-  .px-4.md\:px-8 { padding-left: 0 !important; padding-right: 0 !important; }
-
-  /* Menu category grid: 2 cols already, just keep card height reasonable */
-  .category-card-grid { grid-template-columns: repeat(2, 1fr) !important; }
-
-  /* Menu detail: sidebar becomes a horizontal pill-scroll row */
-  #category-sidebar {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    gap: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
-    scrollbar-width: none !important;
-    /* Kill the space-y-3 vertical margin Tailwind adds to li items */
-    margin-top: 0 !important;
-  }
-  #category-sidebar::-webkit-scrollbar { display: none; }
-  #category-sidebar li {
-    flex-shrink: 0 !important;
-    /* Override space-y-3 which adds margin-top to all but first child */
-    margin-top: 0 !important;
-  }
-  #category-sidebar li button {
-    display: inline-flex !important;
-    align-items: center !important;
-    height: 32px !important;           /* fixed height so all pills are identical */
-    padding: 0 0.9rem !important;
-    border: 1px solid rgba(0,0,0,0.18) !important;
-    border-left: 1px solid rgba(0,0,0,0.18) !important; /* override JS inline border-left */
-    border-radius: 999px !important;
-    font-size: 0.78rem !important;
-    white-space: nowrap !important;
-    background: white !important;
-    color: #414845 !important;
-    line-height: 1 !important;
-    vertical-align: middle !important;
-  }
-  #category-sidebar li button.text-primary,
-  #category-sidebar li button.font-semibold {
-    background: #001d14 !important;
-    color: white !important;
-    border-color: #001d14 !important;
-    border-left-color: #001d14 !important;
-    font-weight: 600 !important;
-  }
-
-  /* Menu detail: aside stacks above items */
-  .menu-detail-aside {
-    width: 100% !important;
-    border-right: none !important;
-    border-bottom: 1px solid rgba(0,0,0,0.1) !important;
-    padding: 1rem 1.25rem !important;
-  }
-
-  /* Active items grid: 1 col on mobile */
-  #active-category-items {
-    grid-template-columns: 1fr !important;
-    gap: 1rem !important;
-  }
-
-  /* Visit Us map height */
-  .map-iframe-wrap { min-height: 240px !important; height: 240px !important; }
-
-  /* Gallery columns */
-  .columns-1.md\:columns-2.lg\:columns-3 { columns: 1 !important; }
-
-  /* Instagram grid: 2 col on mobile (w-1/2 already does this) */
-
-  /* Footer: massive padding → reasonable */
-  footer.py-section-gap,
-  footer[class*="py-section-gap"] {
-    padding-top: 3rem !important;
-    padding-bottom: 2rem !important;
-  }
-
-  /* Footer logo text: 84px → sane size */
-  footer .text-display-lg,
-  footer [class*="text-display"] {
-    font-size: 1.4rem !important;
-    line-height: 2rem !important;
-  }
-
-  /* Footer grid gap */
-  footer .gap-gutter { gap: 2rem !important; }
-  footer .mt-20 { margin-top: 2.5rem !important; }
+/* ── Reservation modal: force dark text in all form fields ── */
+#reservation-modal input,
+#reservation-modal select,
+#reservation-modal textarea {
+  color: #111827 !important;          /* gray-900 */
+  background-color: #ffffff !important;
+  -webkit-text-fill-color: #111827 !important; /* Safari autofill override */
 }
 
-/* Very small screens (iPhone SE etc) */
-@media (max-width: 390px) {
-  .hero-title { font-size: 2rem !important; }
-  .hero-subheadings { font-size: 0.95rem !important; }
-  .btn-primary, .btn-secondary { padding: 0.7rem 1rem !important; font-size: 0.7rem !important; }
+#reservation-modal input::placeholder,
+#reservation-modal textarea::placeholder {
+  color: #9ca3af !important;          /* gray-400 */
+  -webkit-text-fill-color: #9ca3af !important;
+}
+
+/* Select option text (some browsers need this separately) */
+#reservation-modal select option {
+  color: #111827 !important;
+  background-color: #ffffff !important;
 }
