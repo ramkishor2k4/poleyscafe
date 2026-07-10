@@ -157,7 +157,7 @@
       <a class="nav-link" href="#visit">Visit Us</a>
     </div>
     <div class="flex items-center gap-4">
-      <a class="navbar-cta" href="#menu">Explore Menu</a>
+      <a class="navbar-cta hidden md:inline-block" href="#menu">Explore Menu</a>
       <button class="md:hidden text-white hover:text-primary transition-colors focus:outline-none"
         aria-label="Toggle Menu">
         <span class="material-symbols-outlined text-2xl">menu</span>
@@ -205,10 +205,10 @@
           </div>
 
           <!-- Title -->
-          <h1 class="hero-title animate-slide-up">POLEY'S CAFE</h1>
+          <h1 class="hero-title animate-slide-up" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%;">POLEY'S CAFE</h1>
 
           <!-- Subheadings -->
-          <div class="hero-subheadings animate-slide-up-delay-1">
+          <div class="hero-subheadings animate-slide-up-delay-1" style="flex-wrap:wrap;gap:0.4rem 0.6rem;">
             <span>Coffee</span>
             <span class="subheading-dot"></span>
             <span>Conversations</span>
@@ -217,7 +217,7 @@
           </div>
 
           <!-- Supporting Text -->
-          <p class="hero-desc animate-slide-up-delay-2">Awake The Senses, Energize The Soul</p>
+          <p class="hero-desc animate-slide-up-delay-2">Awake The Senses, Energize The Soul.</p>
 
           <!-- Action Buttons -->
           <div class="hero-actions animate-slide-up-delay-3">
