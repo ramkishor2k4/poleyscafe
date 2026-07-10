@@ -356,6 +356,11 @@
   Order Online
   <span class="material-symbols-outlined text-base" style="font-size:16px;">arrow_forward</span>
 </a>
+                <button data-open-reservation
+  class="flex items-center gap-1.5 px-4 py-2 rounded-lg border border-primary text-primary text-sm font-semibold whitespace-nowrap hover:bg-primary hover:text-on-primary transition-colors">
+  <span class="material-symbols-outlined text-base" style="font-size:16px;">calendar_month</span>
+  Reserve a Table
+</button>
 
               </div>
             </div>
@@ -669,7 +674,7 @@
         [...categorySidebar.querySelectorAll('button')].forEach(b => {
           b.classList.toggle('text-primary', b.dataset.cat === cat);
           b.classList.toggle('font-semibold', b.dataset.cat === cat);
-          b.style.borderLeft = b.dataset.cat === cat ? '2px solid var(--tw-text-opacity, currentColor)' : 'none';
+          b.style.borderLeft = '';
         });
         renderItems();
       }
