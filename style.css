@@ -832,3 +832,28 @@ body {
   color: #111827 !important;
   background-color: #ffffff !important;
 }
+
+/* ── Instagram: horizontal scroll on mobile only ── */
+@media (max-width: 768px) {
+  #insta-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    gap: 10px !important;
+    padding: 0 16px 12px !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+  }
+  #insta-grid::-webkit-scrollbar { display: none; }
+
+  #insta-grid .insta-tile {
+    flex: 0 0 72vw !important;   /* each tile = 72% of screen width, peek at next */
+    width: 72vw !important;
+    height: 72vw !important;
+    scroll-snap-align: start !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+  }
+}
